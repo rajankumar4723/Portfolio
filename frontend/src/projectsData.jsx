@@ -1,4 +1,4 @@
-import Todo from "./assets/ToDo.png";
+import ToDo from "./assets/ToDo.png";
 import Contact from "./assets/Contact.png";
 import Timer from "./assets/Timer.png";
 import LaptopEc from "./assets/Laptop.png";
@@ -7,7 +7,7 @@ import LaptopEc from "./assets/Laptop.png";
 const projects = [
   {
     title: "ToDo App",
-    image: Todo,
+    image: ToDo,
     description: "Full-stack ToDo app with React and Node.js",
     live: "https://todo-j7zepaw6k-rajans-projects-1c89cf90.vercel.app",
     github: "https://github.com/rajankumar4723/TodoApp",
