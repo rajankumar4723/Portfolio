@@ -1,5 +1,4 @@
-import Todo from "./assets/Todo.png";
-import Port from "./assets/Port.png";
+import Todo from "./assets/ToDo.png";
 import Contact from "./assets/Contact.png";
 import Timer from "./assets/Timer.png";
 import LaptopEc from "./assets/Laptop.png";
