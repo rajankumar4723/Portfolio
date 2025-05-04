@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import Card from "./Card";
 import HTMLImage from "../assets/HTML.jpeg";
 import CSS from "../assets/CSS.jpeg";
-import JS from "../assets/Js.png";
+import JS from "../assets/js.png";
 import C_Plus from "../assets/C++.png";
 import NODE_JS from "../assets/Node_JS.webp";
 import React_JS from "../assets/React_JS.svg";
