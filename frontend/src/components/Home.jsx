@@ -3,77 +3,134 @@ import "../styles/Home.css";
 import Pic from "../assets/linkdin_pic.jpg";
 import Footer from "./Footer";
 import Card from "./Card";
-import HTMLImage from "../assets/HTML.jpeg";
-import CSS from "../assets/CSS.jpeg";
-import JS from "../assets/js.png";
-import C_Plus from "../assets/C++.png";
+import Ec2 from "../assets/aws-ec2.png";
+import AWS from "../assets/aws.png";
+import S3 from "../assets/aws-s3.png";
+import IAM from "../assets/aws-iam.png";
+import VPC from "../assets/aws-vpc.webp";
+import CloudWatch from "../assets/aws-watch.png";
+import RDS from "../assets/aws-rds.png";
+import Lamda from "../assets/aws-lamda.png";
+import VPN from "../assets/aws-vpn.png";
+import APIGAT from "../assets/api-gat.png";
 import NODE_JS from "../assets/Node_JS.webp";
 import React_JS from "../assets/React_JS.svg";
-import DSA from "../assets/DSA.png";
+import FullStack from "../assets/fullstack.png";
 import MongoDB from "../assets/MG.png";
-import Tailwind from "../assets/tailwind.jpeg";
 import Java from "../assets/java.jpeg";
-
-
-
-
 
 const Home = () => {
   return (
-    <>
-      <div className="main">
+    <div className="home-container">
+      <section className="main">
         <div className="header">
-          <h1>Hi, I'm Rajan 👋</h1>
-          <h3>Frontend Developer | React | JavaScript</h3>
-          <p>
-            I build modern, fast, and responsive web applications. Experienced
-            in React, Next.js, Node.js, and MongoDB. Focused on writing clean
-            code and solving real-world problems.
-          </p>
-          <div className="social-links">
-            <div>
-    
-            <a href="/Rajan.pdf" className="btn-a" download>
-            <i class="fa-solid fa-download"></i>
-</a>
+          <span className="badge">Available for Hire</span>
+          <h1>Hi, I'm <span className="highlight">Rajan </span></h1>
+<h3>Associate AWS Cloud Engineer</h3>
+<p>
+  I architect <strong>resilient cloud ecosystems</strong>. From 3-Tier VPC networks 
+  to Serverless pipelines, I transform complex infrastructure requirements into 
+  high-performance digital realities.
+</p>
 
-            </div>
-            <a className="" href="https://linkedin.com/in/your-profile" target="_blank"><i className="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/your-profile" target="_blank"><i className="fa-brands fa-github"></i></a>
-            <a href="https://twitter.com/your-handle" target="_blank"><i className="fa-brands fa-twitter"></i></a>
+          <div className="social-links">
+            <a
+              href="/Rajan.pdf"
+              title="Download Resume"
+              download
+              aria-label="Resume"
+            >
+              <i className="fa-solid fa-file-pdf"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/rajan-modanwal"
+              target="_blank"
+              rel="noreferrer"
+              title="LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/your-profile"
+              target="_blank"
+              rel="noreferrer"
+              title="GitHub"
+              aria-label="GitHub"
+            >
+              <i className="fa-brands fa-github"></i>
+            </a>
           </div>
         </div>
 
         <div className="header-right">
-          <img src={Pic} alt="Rajan Profile" />
+          <img src={Pic} alt="Cloud Engineer" />
         </div>
+      </section>
+
+      <section className="skills-section">
+        <h2 className="section-title">Cloud Stack & Development</h2>
+        <div className="card-main">
+          {/* Use your specific images here instead of repeating AWS */}
+          <Card image={AWS} title="AWS Architecture" />
+          <Card image={Lamda} title="Serverless Computing" />
+          <Card image={Ec2} title="Cloud Instances" />
+          <Card image={S3} title="Storage Solutions" />
+          <Card image={RDS} title="Database Management" />
+          <Card image={VPC} title="Network Security" />
+          <Card image={APIGAT} title="API Management" />
+
+          {/* Fullstack Skills */}
+          <Card image={React_JS} title="Frontend Development" />
+          <Card image={NODE_JS} title="Backend Engine" />
+          <Card image={MongoDB} title="NoSQL Database" />
+        </div>
+      </section>
+      <section className="featured-container">
+  <h2 className="section-title">Key AWS Deployments</h2>
+
+  {/* Project 1 */}
+  <div className="featured-project">
+    <div className="project-content">
+      <span className="badge">Cloud Infrastructure</span>
+      <h2>High-Availability 3-Tier Architecture</h2>
+      <p>
+        Designed a fault-tolerant system across multiple Availability Zones. 
+        Implemented <strong>Auto Scaling</strong> to handle traffic spikes and 
+        <strong>RDS Multi-AZ</strong> for database redundancy.
+      </p>
+      <div className="tech-stack-tags">
+        <span>Terraform</span> <span>VPC</span> <span>EC2</span> <span>RDS</span>
       </div>
+      <button className="view-case-study">View Case Study</button>
+    </div>
+    <div className="project-image">
+      {/* Insert Diagram here */}
+      <div style={{color: '#475569'}}>Architecture Diagram Placeholder</div>
+    </div>
+  </div>
 
-      <h2 className="section-title">Skills</h2>
-      <div className="card-main">
-       
-       <Card image={C_Plus}/>
-       <Card image={HTMLImage}/>
-       <Card image={CSS}/>
-       <Card image={JS}/>
-       <Card image={NODE_JS}/>
-       <Card image={React_JS}/>
-       <Card image={DSA}/>
-       <Card image={MongoDB}/>
-       <Card image={Tailwind}/>
-       <Card image={Java}/>
-
-
-
-
-
-
-    
-
+  {/* Project 2 - Will automatically flip because of CSS nth-child(even) */}
+  <div className="featured-project">
+    <div className="project-content">
+      <span className="badge">Serverless</span>
+      <h2>Visitor Counter API</h2>
+      <p>
+        A serverless backend using <strong>Lambda</strong> and <strong>DynamoDB</strong> 
+        to track portfolio visitors, integrated via <strong>API Gateway</strong>.
+      </p>
+      <div className="tech-stack-tags">
+        <span>Lambda</span> <span>DynamoDB</span> <span>Python</span> <span>API Gateway</span>
       </div>
-
+      <button className="view-case-study">View Case Study</button>
+    </div>
+    <div className="project-image">
+      <div style={{color: '#475569'}}>API Flow Diagram Placeholder</div>
+    </div>
+  </div>
+</section>
       <Footer />
-    </>
+    </div>
   );
 };
 

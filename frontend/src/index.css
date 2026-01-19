@@ -1,11 +1,28 @@
-html, body {
+/* Default Theme (Dark) */
+body.dark-theme {
+  --bg-color: #0f172a;
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --card-bg: #1e293b;
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #6366f1;
+}
+
+/* Light Theme Overrides */
+body.light-theme {
+  --bg-color: #f1f5f9;
+  --text-main: #1e293b;
+  --text-dim: #475569;
+  --card-bg: #ffffff;
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  --border: rgba(0, 0, 0, 0.1);
+  --accent: #4f46e5;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  font-family: 'Poppins', 'Segoe UI', sans-serif; /* Clean and modern */
-  color: #2c2c2c; /* Dark gray text */
-  background-color: #f9f9f9; /* Light background */
-  line-height: 1.6;
-  font-size: 16px;
 }

@@ -1,3 +1,35 @@
-.colors{
-  color: fuchsia;
+:root {
+  --bg-dark: #0f172a;       /* Deep Navy */
+  --bg-darker: #0b1120;     /* Footer/Navbar background */
+  --accent-blue: #00bcd4;   /* AWS Cyan */
+  --accent-purple: #8b5cf6; /* Modern Purple */
+  --text-main: #f8fafc;     /* Near White */
+  --text-dim: #94a3b8;      /* Slate Gray */
+  --glass: rgba(30, 41, 59, 0.7);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling for Dark Mode */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glass);
+  border-radius: 5px;
 }
