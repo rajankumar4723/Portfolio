@@ -138,6 +138,121 @@
 }
 
 .cta-button:hover { background: #4f46e5; box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4); }
+/* Timeline Styling */
+.experience-section { margin-bottom: 80px; }
+
+.timeline {
+  border-left: 2px solid var(--primary-color);
+  margin-left: 20px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.timeline-item { margin-bottom: 40px; position: relative; }
+
+.timeline-dot {
+  position: absolute;
+  left: -41px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 4px solid var(--bg-dark);
+}
+
+.timeline-date {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.timeline-content h3 { margin: 5px 0; color: #fff; }
+.timeline-content p { color: #94a3b8; font-size: 0.95rem; }
+
+/* Education & Certification Grid */
+.edu-cert-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.edu-item h4 { color: var(--primary-color); margin-bottom: 5px; }
+.edu-item p { color: #fff; margin: 0; }
+.edu-item span { color: #94a3b8; font-size: 0.8rem; }
+
+.cert-list { list-style: none; padding: 0; margin-top: 20px; }
+.cert-list li {
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--aws-orange);
+}
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.cgpa {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.jetking-cert {
+  border-left: 3px solid #ff0000 !important; /* Jetking Red Branding */
+}
+
+.jetking-cert strong {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.jetking-cert p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 0;
+}.intern-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.mini-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.timeline-content p strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .edu-cert-grid { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 768px) {
   .about-hero { flex-direction: column; text-align: center; }

@@ -1,0 +1,120 @@
+/**
+ * PROFESSIONAL UPGRADE:
+ * 1. Uses 'const' for state protection.
+ * 2. Implements .reduce() for complex calculations.
+ * 3. Uses Template Literals for clean UI rendering.
+ * 4. Separates UI logic from Data logic.
+ */
+
+ let desserts = [];
+ let cart = [];
+ 
+ // --- API LAYER ---
+ const fetchDesserts = async () => {
+   try {
+     const response = await fetch('./data.json');
+     if (!response.ok) throw new Error('Network response was not ok');
+     desserts = await response.json();
+     renderUI();
+   } catch (error) {
+     console.error('Fetch Error:', error);
+   }
+ };
+ 
+ // --- DATA LOGIC (Pure Functions) ---
+ const calculateTotal = () => cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+ 
+ const getCartCount = () => cart.reduce((acc, item) => acc + item.quantity, 0);
+ 
+ // --- STATE MANAGEMENT ---
+ const addToCart = (productName) => {
+   const product = desserts.find(d => d.name === productName);
+   const existingItem = cart.find(item => item.name === productName);
+ 
+   if (existingItem) {
+     existingItem.quantity++;
+   } else {
+     cart.push({ ...product, quantity: 1 });
+   }
+   renderUI();
+ };
+ 
+ const updateQuantity = (productName, change) => {
+   const itemIndex = cart.findIndex(item => item.name === productName);
+   if (itemIndex > -1) {
+     cart[itemIndex].quantity += change;
+     if (cart[itemIndex].quantity <= 0) {
+       cart.splice(itemIndex, 1);
+     }
+   }
+   renderUI();
+ };
+ 
+ // --- UI RENDERING ---
+ const renderUI = () => {
+   renderProducts();
+   renderCart();
+ };
+ 
+ const renderProducts = () => {
+   const productContainer = document.getElementById('products');
+   
+   productContainer.innerHTML = desserts.map(dessert => {
+     const itemInCart = cart.find(item => item.name === dessert.name);
+     
+     return `
+       <div class="product-card ${itemInCart ? 'active' : ''}">
+         <div class="image-container">
+           <img src="${dessert.image.desktop}" alt="${dessert.name}" class="product-image">
+           ${itemInCart ? `
+             <div class="quantity-controls">
+               <button onclick="updateQuantity('${dessert.name}', -1)">-</button>
+               <span>${itemInCart.quantity}</span>
+               <button onclick="updateQuantity('${dessert.name}', 1)">+</button>
+             </div>
+           ` : `
+             <button class="add-to-cart-btn" onclick="addToCart('${dessert.name}')">
+               <i class="fa-solid fa-cart-plus"></i> Add to Cart
+             </button>
+           `}
+         </div>
+         <div class="product-meta">
+           <span class="category">${dessert.category}</span>
+           <h3>${dessert.name}</h3>
+           <p class="price">$${dessert.price.toFixed(2)}</p>
+         </div>
+       </div>
+     `;
+   }).join('');
+ };
+ 
+ const renderCart = () => {
+   const cartItems = document.getElementById('cart-items');
+   const cartTotalDisplay = document.getElementById('cart-total');
+   const cartCountDisplay = document.getElementById('cart-count');
+ 
+   cartItems.innerHTML = cart.map((item, index) => `
+     <li class="cart-list-item">
+       <div class="item-info">
+         <span class="item-name">${item.name}</span>
+         <div class="item-pricing">
+           <span class="qty">${item.quantity}x</span>
+           <span class="unit-price">@ $${item.price.toFixed(2)}</span>
+           <span class="sub-total">$${(item.price * item.quantity).toFixed(2)}</span>
+         </div>
+       </div>
+       <button class="remove-btn" onclick="updateQuantity('${item.name}', -${item.quantity})">
+         <i class="fa-regular fa-circle-xmark"></i>
+       </button>
+     </li>
+   `).join('');
+ 
+   const total = calculateTotal();
+   cartTotalDisplay.textContent = `$${total.toFixed(2)}`;
+   cartCountDisplay.textContent = getCartCount();
+   
+   document.getElementById('confirm-order').disabled = cart.length === 0;
+ };
+ 
+ // --- INITIALIZATION ---
+ fetchDesserts();

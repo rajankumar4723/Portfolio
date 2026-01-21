@@ -15,9 +15,9 @@ import VPN from "../assets/aws-vpn.png";
 import APIGAT from "../assets/api-gat.png";
 import NODE_JS from "../assets/Node_JS.webp";
 import React_JS from "../assets/React_JS.svg";
-import FullStack from "../assets/fullstack.png";
+import Three from "../assets/3TierA.png";
 import MongoDB from "../assets/MG.png";
-import Java from "../assets/java.jpeg";
+import Web from "../assets/web-diagram.png";
 
 const Home = () => {
   return (
@@ -25,13 +25,15 @@ const Home = () => {
       <section className="main">
         <div className="header">
           <span className="badge">Available for Hire</span>
-          <h1>Hi, I'm <span className="highlight">Rajan </span></h1>
-<h3>Associate AWS Cloud Engineer</h3>
-<p>
-  I architect <strong>resilient cloud ecosystems</strong>. From 3-Tier VPC networks 
-  to Serverless pipelines, I transform complex infrastructure requirements into 
-  high-performance digital realities.
-</p>
+          <h1>
+            Hi, I'm <span className="highlight">Rajan </span>
+          </h1>
+          <h3>Associate AWS Cloud Engineer</h3>
+          <p>
+            I architect <strong>resilient cloud ecosystems</strong>. From 3-Tier
+            VPC networks to Serverless pipelines, I transform complex
+            infrastructure requirements into high-performance digital realities.
+          </p>
 
           <div className="social-links">
             <a
@@ -87,48 +89,67 @@ const Home = () => {
         </div>
       </section>
       <section className="featured-container">
-  <h2 className="section-title">Key AWS Deployments</h2>
+        <h2 className="section-title">Key AWS Deployments</h2>
 
-  {/* Project 1 */}
-  <div className="featured-project">
-    <div className="project-content">
-      <span className="badge">Cloud Infrastructure</span>
-      <h2>High-Availability 3-Tier Architecture</h2>
-      <p>
-        Designed a fault-tolerant system across multiple Availability Zones. 
-        Implemented <strong>Auto Scaling</strong> to handle traffic spikes and 
-        <strong>RDS Multi-AZ</strong> for database redundancy.
-      </p>
-      <div className="tech-stack-tags">
-        <span>Terraform</span> <span>VPC</span> <span>EC2</span> <span>RDS</span>
-      </div>
-      <button className="view-case-study">View Case Study</button>
-    </div>
-    <div className="project-image">
-      {/* Insert Diagram here */}
-      <div style={{color: '#475569'}}>Architecture Diagram Placeholder</div>
-    </div>
-  </div>
+        {/* Project 1 */}
+        <div className="featured-project">
+          <div className="project-content">
+            <span className="badge">Cloud Infrastructure</span>
+            <h2>High-Availability 3-Tier Architecture</h2>
+            <p>
+              Designed a fault-tolerant system across multiple Availability
+              Zones. Implemented <strong>Auto Scaling</strong> to handle traffic
+              spikes and
+              <strong>RDS Multi-AZ</strong> for database redundancy.
+            </p>
+            <div className="tech-stack-tags">
+              <span>Terraform</span> <span>VPC</span> <span>EC2</span>{" "}
+              <span>RDS</span>
+            </div>
+            <a
+              href="https://www.fosstechnix.com/how-to-set-up-a-3-tier-architecture-on-aws-with-ec2-rds-and-s3/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="view-case-study"> View case-study </button>
+            </a>{" "}          </div>
+          <div className="project-image">
+            {/* Insert Diagram here */}
+            
+            
+            <img src={Three} alt="" />
+          </div>
+        </div>
 
-  {/* Project 2 - Will automatically flip because of CSS nth-child(even) */}
-  <div className="featured-project">
-    <div className="project-content">
-      <span className="badge">Serverless</span>
-      <h2>Visitor Counter API</h2>
-      <p>
-        A serverless backend using <strong>Lambda</strong> and <strong>DynamoDB</strong> 
-        to track portfolio visitors, integrated via <strong>API Gateway</strong>.
-      </p>
-      <div className="tech-stack-tags">
-        <span>Lambda</span> <span>DynamoDB</span> <span>Python</span> <span>API Gateway</span>
-      </div>
-      <button className="view-case-study">View Case Study</button>
-    </div>
-    <div className="project-image">
-      <div style={{color: '#475569'}}>API Flow Diagram Placeholder</div>
-    </div>
-  </div>
-</section>
+        {/* Project 2 - Will automatically flip because of CSS nth-child(even) */}
+        <div className="featured-project">
+          <div className="project-content">
+            <span className="badge">Serverless</span>
+            <h2>Visitor Counter API</h2>
+            <p>
+              A serverless backend using <strong>Lambda</strong> and{" "}
+              <strong>DynamoDB</strong>
+              to track portfolio visitors, integrated via{" "}
+              <strong>API Gateway</strong>.
+            </p>
+            <div className="tech-stack-tags">
+              <span>Lambda</span> <span>DynamoDB</span> <span>Python</span>{" "}
+              <span>API Gateway</span>
+            </div>
+            <a
+              href="https://tourmaline-bienenstitch-cde731.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="view-case-study"> Live Demo </button>
+            </a>{" "}
+          </div>
+          <div className="project-image">
+            {/* <div style={{color: '#475569'}}>API Flow Diagram Placeholder</div> */}
+            <img src={Web} alt="" />
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );

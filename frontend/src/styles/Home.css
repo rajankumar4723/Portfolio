@@ -207,7 +207,10 @@
   line-height: 1.7;
   margin-bottom: 25px;
 }
-
+.project-image img{
+  width: 100%;
+  height: 100%;
+}
 /* Tech Stack Tags */
 .tech-stack-tags {
   display: flex;

@@ -139,3 +139,40 @@
   font-weight: 500;
   border: 1px solid rgba(99, 102, 241, 0.2);
 }
+/* Filter Buttons */
+.filter-container {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #94a3b8;
+  padding: 8px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-btn.active {
+  background: #00bcd4;
+  color: #0f172a;
+  border-color: #00bcd4;
+}
+
+/* Specific Highlight for Cloud type */
+.cloud-type {
+  color: #ff9900 !important; /* AWS Orange */
+}
+
+.tech-tag {
+  background: rgba(0, 188, 212, 0.1);
+  color: #00bcd4;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  border: 1px solid rgba(0, 188, 212, 0.2);
+}
