@@ -184,5 +184,26 @@
     font-size: 0.8rem;
     margin: 5px;
   }
+  .projects-page {
+    background-color: #0f172a; /* Deep Navy */
+    color: #fff;
+    padding: 100px 0px;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+    
+  }
+  .project-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    margin: 10px;
+  }
+  
 }
-2. Upgr
