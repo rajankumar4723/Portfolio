@@ -309,6 +309,61 @@
 .social-links a:hover i {
   transform: scale(1.1);
 }
+/* Custom Image Container to prevent overflow issues */
+.image-blob-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-right img {
+  width: 320px;
+  height: 320px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  object-fit: cover;
+  border: 5px solid #6366f1;
+  animation: morphing 8s infinite ease-in-out;
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+@keyframes morphing {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* Badge Pulse Effect */
+.badge {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  to { left: 100%; }
+}
+
+/* Featured Project Image Styling */
+.project-image img {
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.5s ease;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.featured-project:hover .project-image img {
+  transform: scale(1.05);
+}
 /* Responsive Fixes */
 @media (max-width: 768px) {
   .main {

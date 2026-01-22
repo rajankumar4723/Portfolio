@@ -19,17 +19,30 @@ const About = () => {
               <div className="status-badge">Available for Work</div>
             </div>
             <div className="about-text">
-              <h1 className="job-title">Cloud & Full-Stack Engineer</h1>
-              <p className="description">
-                I am a <strong>Cloud Engineer</strong> focused on building resilient, scalable infrastructure. 
-                My expertise lies in deploying <strong>3-Tier Architectures</strong> on AWS.
-              </p>
-              <div className="hero-stats">
-                <div className="stat-item"><strong>10+</strong><span>AWS Projects</span></div>
-                <div className="stat-item"><strong>IaC</strong><span>Terraform</span></div>
-                <div className="stat-item"><strong>MCA</strong><span>CSE</span></div>
-              </div>
-            </div>
+  <h1 className="job-title">Cloud & DevOps Engineer</h1>
+  <p className="description">
+    I am a <strong>Cloud Solutions Architect</strong> specializing in automated, 
+    <strong> High-Availability infrastructure</strong>. Leveraging a deep background 
+    in <strong>Networking and Hardware</strong>, I bridge the gap between bare-metal 
+    reliability and modern cloud scalability. My mission is to engineer 
+    <strong> Zero-Downtime environments</strong> using AWS best practices, 
+    Infrastructure as Code (IaC), and secure CI/CD pipelines.
+  </p>
+  <div className="hero-stats">
+    <div className="stat-item">
+      <strong>10+</strong>
+      <span>Cloud Deployments</span>
+    </div>
+    <div className="stat-item">
+      <strong>IaC</strong>
+      <span>Terraform / CloudFormation</span>
+    </div>
+    <div className="stat-item">
+      <strong>99.9%</strong>
+      <span>Uptime Focus</span>
+    </div>
+  </div>
+</div>
           </div>
 
           {/* New Section: Experience & Internships */}

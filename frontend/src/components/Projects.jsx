@@ -37,11 +37,11 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="project-grid">
-          {filteredProjects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
-        </div>
+        <div className="project-grid" key={filter}>
+  {filteredProjects.map((project, index) => (
+    <ProjectCard key={project.title} project={project} />
+  ))}
+</div>
       </div>
       <Footer />
     </>
